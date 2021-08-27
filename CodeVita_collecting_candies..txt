@@ -1,0 +1,20 @@
+# Codevita Collecting candies  
+
+list1 = []
+list2 = []
+
+T = int(input("Enter the number of test cases:"))
+
+for i in range(0, T):
+    N = int(input("Enter the number of boxes in test case %d:"%(i+1)))
+    for j in range(0, N):
+        list1.append(int(input("Enter the no of candies in box %d:"%(j+1))))
+        
+    sum1 = list1[0]
+    for k in range(1, len(list1)):
+        sum1 = sum1 + list1[k]
+        list2.append(sum1)
+        
+    print(sum(list2))
+    list2 = []
+    list1 = []
